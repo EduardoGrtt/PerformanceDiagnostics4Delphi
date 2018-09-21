@@ -1,1 +1,1 @@
-# PerformanceDiagnostic
+# PerformanceDiagnostics4Delphi
