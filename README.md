@@ -12,10 +12,10 @@ begin
   AMyObject := TMyClass.Create;
   try
     {Execute is a method of TMyClass}
-    APerformance := TPerformanceDiagnostics.New(AMyClass).Add('Execute');
-    AMyClass.Execute;
+    APerformance := TPerformanceDiagnostics.New(AMyObject).Add('Execute');
+    AMyObject.Execute;
   finally
-    AMyClass.Free;
+    AMyObject.Free;
   end;
   ShowMessage(Format('%f seconds', [APerformance.GetTotalSeconds]));
 end;
