@@ -17,7 +17,7 @@ type
   ['{E206BC61-8D6A-42DC-B89B-EDF21F4762E1}']
     function Add(_AMethodName: string): IPerformanceDiagnostics;
     function GetTotalSeconds: Double;
-    function GetMiliseconds: Double;
+    function GetTotalMiliseconds: Double;
   end;
 
 implementation

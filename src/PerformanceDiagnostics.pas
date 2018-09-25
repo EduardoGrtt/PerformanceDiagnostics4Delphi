@@ -25,7 +25,7 @@ type
 
       function Add(_AMethodName: string): IPerformanceDiagnostics;
       function GetTotalSeconds: Double;
-      function GetMiliseconds: Double;
+      function GetTotalMiliseconds: Double;
   end;
 
 implementation
@@ -70,7 +70,7 @@ begin
   Result := FInterceptedList;
 end;
 
-function TPerformanceDiagnostics.GetMiliseconds: Double;
+function TPerformanceDiagnostics.GetTotalMiliseconds: Double;
 var
   ATimeSpan: TTimeSpan;
   AStopWatch: TStopwatch;

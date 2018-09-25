@@ -1,0 +1,10 @@
+
+src/__history/
+
+sample/simple_class/Win32/
+
+sample/simple_class/__history/
+
+*.identcache
+
+*.stat
