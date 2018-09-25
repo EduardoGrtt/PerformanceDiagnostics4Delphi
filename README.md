@@ -4,4 +4,19 @@ Works based on TObject and String(MethodName).
 ## How to Use
 To use this API you must add the "PerformanceDiagnostics4Delphi\src" Path in your Delphi or on your project.
 ## Sample
-(Under development)
+```pascal
+var
+  APerformance: IPerformanceDiagnostics;
+  AMyObject: TMyClass;
+begin
+  AMyObject := TMyClass.Create;
+  try
+    {Execute is a method of TMyClass}
+    APerformance := TPerformanceDiagnostics.New(AMyClass).Add('Execute');
+    AMyClass.Execute;
+  finally
+    AMyClass.Free;
+  end;
+  ShowMessage(Format('%f seconds', [APerformance.GetTotalSeconds]));
+end;
+```
