@@ -56,6 +56,10 @@
         <DCC_S>false</DCC_S>
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <DCC_UnitSearchPath>..\..\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <Custom_Styles>&quot;Windows10 Dark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows10Dark.vsf&quot;</Custom_Styles>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>
@@ -85,6 +89,8 @@
         <AppEnableHighDPI>true</AppEnableHighDPI>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -100,13 +106,10 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Unit2.pas">
-            <Form>Form2</Form>
+        <DCCReference Include="uMainView.pas">
+            <Form>MainView</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="src\PerformanceDiagnostics.Interfaces.pas"/>
-        <DCCReference Include="src\PerformanceDiagnostics.pas"/>
-        <DCCReference Include="src\PerformanceDiagnostics.VirtualMethodInterceptor.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -127,6 +130,10 @@
                 <Source>
                     <Source Name="MainSource">Project1.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k250.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp250.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
                 <DeployFile LocalName="Win32\Debug\Project1.exe" Configuration="Debug" Class="ProjectOutput">

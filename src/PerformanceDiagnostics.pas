@@ -18,14 +18,15 @@ type
       function GetInterceptedList: TInterceptedList;
     protected
       property List: TInterceptedList read GetInterceptedList;
-    public
-      constructor Create(_AObject: TObject);
-      destructor Destroy; override;
-      class function New(_AObject: TObject): IPerformanceDiagnostics;
 
       function Add(_AMethodName: string): IPerformanceDiagnostics;
       function GetTotalSeconds: Double;
       function GetTotalMiliseconds: Double;
+
+      constructor Create(_AObject: TObject);
+    public
+      class function New(_AObject: TObject): IPerformanceDiagnostics;
+      destructor Destroy; override;
   end;
 
 implementation

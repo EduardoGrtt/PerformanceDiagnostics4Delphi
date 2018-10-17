@@ -5,5 +5,7 @@
     <Transaction>2018/09/20 23:04:47.000.127,C:\Users\eduar\Documents\Embarcadero Conference\PermormanceDiagnostics_BETA\PeformanceDiagnostics.pas=C:\Users\eduar\Documents\Embarcadero Conference\PermormanceDiagnostics_BETA\uPerformanceDiagnostics.pas</Transaction>
     <Transaction>2018/09/20 23:05:39.000.627,C:\Users\eduar\Documents\Embarcadero Conference\PermormanceDiagnostics_BETA\PerformanceDiagnostics.VirtualMethodInterceptor.pas=C:\Users\eduar\Documents\Embarcadero Conference\PermormanceDiagnostics_BETA\uVirtualMethodInterceptor.pas</Transaction>
     <Transaction>2018/09/20 23:05:48.000.840,C:\Users\eduar\Documents\Embarcadero Conference\PermormanceDiagnostics_BETA\PerformanceDiagnostics.pas=C:\Users\eduar\Documents\Embarcadero Conference\PermormanceDiagnostics_BETA\PeformanceDiagnostics.pas</Transaction>
+    <Transaction>2018/10/16 20:43:44.724,C:\Users\eduar\Documents\Projects\PerformanceDiagnostics4Delphi\sample\simple_class\uMainView.dfm=C:\Users\eduar\Documents\Projects\PerformanceDiagnostics4Delphi\sample\simple_class\Unit2.dfm</Transaction>
+    <Transaction>2018/10/16 20:43:44.724,C:\Users\eduar\Documents\Projects\PerformanceDiagnostics4Delphi\sample\simple_class\uMainView.pas=C:\Users\eduar\Documents\Projects\PerformanceDiagnostics4Delphi\sample\simple_class\Unit2.pas</Transaction>
   </Transactions>
 </BorlandProject>
