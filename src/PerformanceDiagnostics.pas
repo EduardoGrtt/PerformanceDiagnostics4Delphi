@@ -12,6 +12,7 @@ type
     strict private
       FInterceptor: IMethodInterceptor;
       FInterceptedList: TInterceptedList;
+      FObjectClassType: TClass;
     private
       procedure DoOnBefore(_AInstance: TObject; _AMethod: TRttiMethod; const _AArgs: TArray<TValue>; out _ADoInvoke: Boolean; out _AResult: TValue);
       procedure DoOnAfter(_AInstance: TObject; _AMethod: TRttiMethod; const _AArgs: TArray<TValue>; var _AResult: TValue);
@@ -34,13 +35,21 @@ implementation
 { TPerformanceDiagnostics }
 
 function TPerformanceDiagnostics.Add(_AMethodName: string): IPerformanceDiagnostics;
+var
+  RttiContext: TRttiContext;
+  RttiMethod: TRttiMethod;
 begin
+  RttiMethod := RttiContext.GetType(FObjectClassType).GetMethod(_AMethodName);
+  if not (Assigned(RttiMethod) and (RttiMethod.DispatchKind = dkVtable)) then
+    raise Exception.CreateFmt('"%s" is not a virtual method.' , [_AMethodName]);
+
   List.Add(_AMethodName, Default(TStopwatch));
   Result := Self;
 end;
 
 constructor TPerformanceDiagnostics.Create(_AObject: TObject);
 begin
+  FObjectClassType := _AObject.ClassType;
   FInterceptor := TMethodInterceptor.New(_AObject, DoOnBefore, DoOnAfter);
 end;
 
