@@ -4,7 +4,7 @@ Works based on TObject and String(MethodName).
 
 ### For install in your project using [boss](https://github.com/HashLoad/boss):
 ``` sh
-$ boss install boss install github.com/EduardoGrtt/PerformanceDiagnostics4Delphi:1.0.0
+$ boss install github.com/EduardoGrtt/PerformanceDiagnostics4Delphi:1.0.0
 ```
 ### How to Use
 To use this API you must add the "PerformanceDiagnostics4Delphi\src" Path in your Delphi or on your project.
